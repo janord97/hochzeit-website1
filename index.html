@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jan-Niklas & Kea heiraten!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+      /* Custom scroll behavior */
+      html {
+        scroll-behavior: smooth;
+        /* Custom scrollbar for Firefox */
+        scrollbar-width: thin;
+        scrollbar-color: #A78A6A #F5F1E9; /* thumb track */
+      }
+
+      /* Custom Scrollbar Styling for Webkit browsers (Chrome, Safari, etc.) */
+      /* Wir zielen auf den body, um sicherzustellen, dass die Stile angewendet werden. */
+      body::-webkit-scrollbar {
+        width: 12px;
+      }
+
+      body::-webkit-scrollbar-track {
+        background: #F5F1E9; /* brand-beige */
+      }
+
+      body::-webkit-scrollbar-thumb {
+        background-color: #A78A6A; /* brand-gold */
+        border-radius: 20px;
+        border: 3px solid #F5F1E9; /* Ein kleiner "Rand" in der Hintergrundfarbe */
+      }
+
+      body::-webkit-scrollbar-thumb:hover {
+        background-color: #4A6B5D; /* brand-green */
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'sans': ['Montserrat', 'sans-serif'],
+              'serif': ['Cormorant Garamond', 'serif'],
+            },
+            colors: {
+              'brand-beige': '#F5F1E9',
+              'brand-green': '#4A6B5D',
+              'brand-dark': '#3a3a3a',
+              'brand-gold': '#A78A6A',
+            },
+            backgroundImage: {
+              'mountain-pattern': "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234A6B5D' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-brand-beige">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
