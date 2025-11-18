@@ -6,7 +6,7 @@ const Locations: React.FC = () => {
     <SectionWrapper
       id="details"
       title="Location & Anfahrt"
-      subtitle="Alle wichtigen Informationen zu unseren Orten des Geschehens."
+      subtitle="Hier feiern wir unseren großen Tag."
       className="bg-white/50"
     >
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 lg:gap-12">

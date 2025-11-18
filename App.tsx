@@ -48,6 +48,17 @@ const App: React.FC = () => {
   const showAlmDetails = eventType === 'alm' || eventType === 'all';
   const showCivilDetails = eventType === 'civil' || eventType === 'all';
 
+  // Manuelle Scroll-Logik für sanfteres und genaueres Verhalten
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      // URL Hash aktualisieren, ohne zu springen
+      window.history.pushState(null, '', href);
+    }
+  };
+
   return (
     <div className="bg-brand-beige text-brand-dark font-sans antialiased">
       <nav className="sticky top-0 z-50 bg-brand-beige/80 backdrop-blur-md shadow-sm">
@@ -58,7 +69,8 @@ const App: React.FC = () => {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="text-brand-dark hover:text-brand-green px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  className="text-brand-dark hover:text-brand-green px-3 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer"
                 >
                   {item.label}
                 </a>
@@ -84,33 +96,6 @@ const App: React.FC = () => {
       </main>
 
       <Footer />
-      
-      {/* Preview Switcher */}
-      <div className="fixed bottom-4 right-4 z-[100] bg-brand-dark/80 backdrop-blur-sm text-white p-4 rounded-lg shadow-2xl space-y-2 max-w-xs font-sans">
-        <h4 className="font-bold font-serif text-lg">Vorschau für:</h4>
-        <p className="text-xs text-white/80">Hier kannst du die Ansicht für die verschiedenen Gästegruppen testen.</p>
-        <div className="flex flex-col space-y-2 pt-2">
-          <button
-            onClick={() => setEventType('alm')}
-            className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${eventType === 'alm' ? 'bg-brand-green' : 'bg-white/20 hover:bg-white/30'}`}
-          >
-            Nur Alm-Feier (Standard)
-          </button>
-          <button
-            onClick={() => setEventType('all')}
-            className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${eventType === 'all' ? 'bg-brand-green' : 'bg-white/20 hover:bg-white/30'}`}
-          >
-            Alm + Standesamt-Feier
-          </button>
-          <button
-            onClick={() => setEventType('civil')}
-            className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${eventType === 'civil' ? 'bg-brand-green' : 'bg-white/20 hover:bg-white/30'}`}
-          >
-            Nur Standesamt-Feier
-          </button>
-        </div>
-      </div>
-
     </div>
   );
 };

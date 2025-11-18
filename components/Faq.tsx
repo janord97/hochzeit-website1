@@ -5,7 +5,7 @@ import { EventType } from '../App';
 const faqData = [
   {
     question: "Gibt es einen Dresscode?",
-    answer: "Wir wünschen uns festliche Kleidung. Das Wichtigste ist aber, dass ihr euch wohlfühlt und mit uns feiert! (Kleiner Tipp für die Alm: Es ist eine Berg-Location, also vielleicht keine Stilettos.)",
+    answer: "Wir wünschen uns festliche Kleidung. Das Wichtigste ist aber, dass ihr euch wohlfühlt und mit uns feiert!",
     tags: ['alm', 'all', 'civil']
   },
   {
@@ -27,6 +27,16 @@ const faqData = [
     question: "Gibt es Parkmöglichkeiten vor Ort (Stöttlalm)?",
     answer: "Bitte beachtet: Direkt bei der Stöttlalm gibt es keine Parkmöglichkeiten. Wir treffen uns daher alle am Greenvieh Parkplatz (Lehnsteig 1a, 6414 Mieming). Von dort aus organisieren wir einen bequemen Shuttle-Service, der euch zur Alm und später wieder zurück bringt.",
     tags: ['alm', 'all']
+  },
+  {
+    question: "Findet die Feier drinnen oder draußen statt?",
+    answer: "Unsere freie Trauung findet draußen am See statt – bei Regen sind wir durch große Schirme geschützt. Auch den Sektempfang genießen wir bei gutem Wetter an der frischen Luft. Zum Abendessen und für die anschließende Party ziehen wir dann gemeinsam in die gemütliche Alm um.",
+    tags: ['alm', 'all']
+  },
+  {
+    question: "Sind kleine Partygäste auch eingeladen?",
+    answer: "Ja, natürlich! Wir freuen uns über jeden Mini-Gast.",
+    tags: ['alm', 'all', 'civil']
   }
 ];
 
@@ -35,14 +45,15 @@ interface FaqItemProps {
   answer: string;
   isOpen: boolean;
   onClick: () => void;
+  isLast: boolean;
 }
 
-const FaqItem: React.FC<FaqItemProps> = ({ question, answer, isOpen, onClick }) => {
+const FaqItem: React.FC<FaqItemProps> = ({ question, answer, isOpen, onClick, isLast }) => {
   return (
-    <div className="border-b border-brand-gold/30">
+    <div className={`border-brand-gold/30 ${isLast ? '' : 'border-b'}`}>
       <button
         onClick={onClick}
-        className="w-full text-left py-4 flex justify-between items-center"
+        className="w-full text-left py-4 flex justify-between items-center focus:outline-none select-none"
         aria-expanded={isOpen}
       >
         <span className="text-lg font-semibold text-brand-dark">{question}</span>
@@ -50,7 +61,7 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer, isOpen, onClick }) 
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
         </span>
       </button>
-      <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-96' : 'max-h-0'}`}>
+      <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
         <p className="pb-4 pr-6 text-brand-dark/80">{answer}</p>
       </div>
     </div>
@@ -81,7 +92,7 @@ const Faq: React.FC<FaqProps> = ({ eventType }) => {
     <SectionWrapper
       id="faq"
       title="Fragen & Antworten"
-      subtitle="Hier haben wir einige häufig gestellte Fragen für euch beantwortet."
+      subtitle="Hier beantworten wir alles, was euch wahrscheinlich unter den Nägeln brennt."
     >
       <div className="max-w-3xl mx-auto bg-white/50 p-6 rounded-lg shadow-lg">
         {filteredFaqs.map((item, index) => (
@@ -91,6 +102,7 @@ const Faq: React.FC<FaqProps> = ({ eventType }) => {
             answer={item.answer}
             isOpen={openIndex === index}
             onClick={() => handleClick(index)}
+            isLast={index === filteredFaqs.length - 1}
           />
         ))}
       </div>

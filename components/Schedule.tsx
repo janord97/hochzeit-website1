@@ -5,7 +5,7 @@ const scheduleItems = [
   { time: '14:00', title: 'Treffpunkt & Shuttle', description: 'Wir treffen uns am Greenvieh-Parkplatz. Von dort bringen euch Shuttle-Busse zur Alm.' },
   { time: '15:00', title: 'Freie Trauung', description: 'Mit Blick auf die Berge geben wir uns das Ja-Wort.' },
   { time: '16:00 - 18:00', title: 'Get-Together & Fotos', description: 'Zeit für Gespräche, Gratulationen und das Genießen der Aussicht.' },
-  { time: '18:30', title: 'Abendessen', description: 'Lasst uns gemeinsam das köstliche Hochzeitsmenü genießen.' },
+  { time: '18:30', title: 'Abendessen', description: 'Freut euch auf ein alpines Menü, das wir mit euch teilen möchten.' },
   { time: '21:00', title: 'Tanz & Party', description: 'Zeit, die Tanzfläche zu erobern und mit uns zu feiern!' },
   { time: '00:00', title: 'Mitternachtssnack', description: 'Eine kleine Stärkung für alle, die noch weiterfeiern wollen.' },
   { time: '02:00', title: 'Ausklang & Shuttle', description: 'Die Feier neigt sich dem Ende zu. Shuttles bringen euch sicher nach Hause (innerhalb von Mieming).' }

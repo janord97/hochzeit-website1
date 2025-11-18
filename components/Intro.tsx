@@ -25,7 +25,7 @@ const Intro: React.FC<IntroProps> = ({ eventType }) => {
             <p>
                 Liebe Familie, liebe Freunde,
                 <br/><br/>
-                wir freuen uns riesig, euch auf unserer Hochzeitsseite begrüßen zu dürfen. Hier findet ihr alle wichtigen Informationen rund um unseren großen Tag. Wir können es kaum erwarten, dieses unvergessliche Ereignis mit euch zu teilen!
+                wir freuen uns riesig, euch auf unserer Hochzeitsseite begrüßen zu dürfen. Hier findet ihr alle wichtigen Informationen rund um unseren großen Tag. Wir können es kaum erwarten, diesen unvergesslichen Moment mit euch zu teilen!
             </p>
         </div>
         <div className="w-full h-80 rounded-lg overflow-hidden shadow-lg transform md:rotate-[3deg] transition hover:scale-105 hover:rotate-0">

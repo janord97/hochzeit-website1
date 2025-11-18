@@ -17,19 +17,27 @@ const CivilCeremony: React.FC<CivilCeremonyProps> = ({ eventType }) => {
         subtitle="Alle Informationen zu unserer standesamtlichen Trauung und der anschließenden Feier."
         className="bg-white/50"
       >
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 lg:gap-12">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch">
           {/* Column 1: Ceremony */}
-          <div className="bg-white p-6 md:p-8 rounded-lg shadow-lg flex flex-col">
-            <h3 className="text-2xl font-semibold text-brand-green font-serif mb-4">Standesamtliche Trauung</h3>
-            <div className="mb-4">
-              <p><span className="font-semibold text-brand-dark">Datum:</span> 8. Mai 2026, 12:00 Uhr</p>
-              <p><span className="font-semibold text-brand-dark">Ort:</span> Wassermühle (Klosterschänke)</p>
-              <p className="text-brand-dark/80 text-sm">
-                An der Wassermühle 1<br />
-                27798 Hude (Oldenburg), Deutschland
-              </p>
+          <div className="bg-white p-8 rounded-lg shadow-lg flex flex-col h-full">
+            <div className="flex-grow">
+                <h3 className="text-2xl font-semibold text-brand-green font-serif mb-6">Standesamtliche Trauung</h3>
+                <div className="space-y-6 mb-8">
+                  <div>
+                      <p className="text-sm font-bold text-brand-dark uppercase tracking-wider mb-1">Wann?</p>
+                      <p className="text-lg text-brand-dark/90">8. Mai 2026, 12:00 Uhr</p>
+                  </div>
+                  <div>
+                      <p className="text-sm font-bold text-brand-dark uppercase tracking-wider mb-1">Wo?</p>
+                      <p className="text-lg font-medium text-brand-dark/90">Wassermühle (Klosterschänke)</p>
+                      <p className="text-brand-dark/80">
+                        An der Wassermühle 1<br />
+                        27798 Hude (Oldenburg)
+                      </p>
+                  </div>
+                </div>
             </div>
-            <div className="flex-grow h-64 md:h-80 rounded-lg overflow-hidden shadow-md border-4 border-white">
+            <div className="w-full h-64 rounded-lg overflow-hidden shadow-md border-4 border-white shrink-0">
               <iframe
                 src="https://maps.google.com/maps?q=Wasserm%C3%BChle%20Hude,%20An%20der%20Wasserm%C3%BChle%201,%2027798%20Hude&t=&z=16&ie=UTF8&iwloc=&output=embed"
                 width="100%"
@@ -44,19 +52,28 @@ const CivilCeremony: React.FC<CivilCeremonyProps> = ({ eventType }) => {
           </div>
 
           {/* Column 2: Celebration */}
-          <div className="bg-white p-6 md:p-8 rounded-lg shadow-lg flex flex-col">
-            <h3 className="text-2xl font-semibold text-brand-green font-serif mb-4">Feier im Anschluss</h3>
-            <div className="mb-4">
-              <p className="font-semibold text-brand-dark">Private Feier</p>
-              <p className="text-brand-dark/80">
-                Forellenweg 1<br />
-                27777 Ganderkesee, Deutschland
-              </p>
-              <p className="mt-2 text-sm text-brand-dark/70">
-                Im Anschluss an die Trauung möchten wir den Tag gerne mit euch ausklingen lassen.
-              </p>
+          <div className="bg-white p-8 rounded-lg shadow-lg flex flex-col h-full">
+            <div className="flex-grow">
+                <h3 className="text-2xl font-semibold text-brand-green font-serif mb-6">Feier im Anschluss</h3>
+                <div className="space-y-6 mb-8">
+                  <div>
+                      <p className="text-sm font-bold text-brand-dark uppercase tracking-wider mb-1">Wo?</p>
+                      <p className="text-lg text-brand-dark/90">
+                        Forellenweg 1<br />
+                        27777 Ganderkesee
+                      </p>
+                  </div>
+                  <div className="text-brand-dark/80 space-y-2">
+                      <p>
+                        Im Anschluss an die Trauung möchten wir den Tag gerne mit euch ausklingen lassen.
+                      </p>
+                      <p className="text-brand-green font-medium">
+                        Hinweis: Die Feier findet draußen im Garten statt.
+                      </p>
+                  </div>
+                </div>
             </div>
-            <div className="flex-grow h-64 md:h-80 rounded-lg overflow-hidden shadow-md border-4 border-white">
+            <div className="w-full h-64 rounded-lg overflow-hidden shadow-md border-4 border-white shrink-0">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2410.596000002146!2d8.473528677028884!3d52.99368997217348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b7274070a248f1%3A0xb35a9f242502604!2sForellenweg%201%2C%2027777%20Ganderkesee!5e0!3m2!1sde!2sde!4v1716301389808!5m2!1sde!2sde"
                 width="100%"
@@ -96,8 +113,8 @@ const CivilCeremony: React.FC<CivilCeremonyProps> = ({ eventType }) => {
                 27798 Hude (Oldenburg), Deutschland
               </p>
             </div>
-             <p className="mt-4 text-xs text-brand-dark/70">
-                Bitte beachtet, dass diese Zeremonie nur im engsten Familienkreis stattfindet. Wir freuen uns riesig darauf, mit euch allen am 15. Mai in den Bergen zu feiern!
+             <p className="mt-4 text-sm text-brand-dark/80 italic">
+                Ihr seid herzlich eingeladen, nach der Zeremonie kurz zum Anstoßen und Gratulieren vorbeizukommen! Bitte habt jedoch Verständnis, dass die Trauung selbst (innen) und die anschließende Feier im privaten Kreis stattfinden.
             </p>
           </div>
 
