@@ -25,14 +25,14 @@ const App: React.FC = () => {
 
   const getNavItems = () => {
     const baseItems = [
-      { href: '#story', label: 'Unsere Geschichte' },
+      { href: '#story', label: 'Grußwort' },
       { href: '#rsvp', label: 'Rückmeldung' },
       { href: '#faq', label: 'FAQ' },
     ];
 
     if (eventType === 'alm' || eventType === 'all') {
       return [
-        { href: '#story', label: 'Unsere Geschichte' },
+        { href: '#story', label: 'Grußwort' },
         { href: '#details', label: 'Details' },
         { href: '#ablauf', label: 'Ablauf' },
         { href: '#rsvp', label: 'Rückmeldung' },
