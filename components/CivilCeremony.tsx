@@ -59,7 +59,7 @@ const CivilCeremony: React.FC<CivilCeremonyProps> = ({ eventType }) => {
                   <div>
                       <p className="text-sm font-bold text-brand-dark uppercase tracking-wider mb-1">Wo?</p>
                       <p className="text-lg text-brand-dark/90">
-                        Forellenweg 1<br />
+                        Vollersweg 5<br />
                         27777 Ganderkesee
                       </p>
                   </div>
@@ -75,14 +75,14 @@ const CivilCeremony: React.FC<CivilCeremonyProps> = ({ eventType }) => {
             </div>
             <div className="w-full h-64 rounded-lg overflow-hidden shadow-md border-4 border-white shrink-0">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2410.596000002146!2d8.473528677028884!3d52.99368997217348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b7274070a248f1%3A0xb35a9f242502604!2sForellenweg%201%2C%2027777%20Ganderkesee!5e0!3m2!1sde!2sde!4v1716301389808!5m2!1sde!2sde"
+                src="https://maps.google.com/maps?q=Vollersweg%205,%2027777%20Ganderkesee&t=&z=16&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen={true}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Karte zum Forellenweg, Ganderkesee"
+                title="Karte zum Vollersweg, Ganderkesee"
               ></iframe>
             </div>
           </div>
