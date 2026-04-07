@@ -10,7 +10,7 @@ const faqData = [
   },
   {
     question: "Was wünschen wir uns zur Hochzeit?",
-    answer: "Geld ist nicht alles - aber es beruhigt. Ihr dürft uns also gerne ein bisschen beruhigen...",
+    answer: "Geld ist nicht alles - aber es beruhigt. Ihr dürft uns also gerne ein bisschen beruhigen... Bitte denkt bei eurer Geschenkidee daran, dass wir im Anschluss direkt in die Flitterwochen starten und nur begrenzt Platz im Gepäck haben.",
     tags: ['alm', 'all', 'civil']
   },
   {
