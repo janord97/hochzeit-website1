@@ -2,7 +2,7 @@ import React from 'react';
 import SectionWrapper from './SectionWrapper';
 
 const scheduleItems = [
-  { time: '14:00', title: 'Treffpunkt & Shuttle', description: 'Wir treffen uns am Greenvieh-Parkplatz. Von dort bringen euch Shuttle-Busse zur Alm.' },
+  { time: '13:45', title: 'Treffpunkt & Shuttle', description: 'Wir treffen uns am Greenvieh-Parkplatz. Von dort bringen euch Shuttle-Busse zur Alm.' },
   { time: '15:00', title: 'Freie Trauung', description: 'Mit Blick auf die Berge geben wir uns das Ja-Wort.' },
   { time: '16:00 - 18:00', title: 'Get-Together & Fotos', description: 'Zeit für Gespräche, Gratulationen und das Genießen der Aussicht.' },
   { time: '18:30', title: 'Abendessen', description: 'Freut euch auf ein alpines Menü, das wir mit euch teilen möchten.' },

@@ -20,7 +20,7 @@ const Locations: React.FC = () => {
               6414 Mieming, Österreich
             </p>
             <p className="mt-2 text-sm text-brand-dark/70">
-              Bitte parkt hier euer Auto. Ab 14:00 Uhr stehen Shuttle-Busse bereit, die euch bequem zur Stöttlalm bringen.
+              Bitte parkt hier euer Auto. Ab 13:45 Uhr stehen Shuttle-Busse bereit, die euch bequem zur Stöttlalm bringen.
             </p>
           </div>
           <div className="flex-grow h-80 md:h-96 rounded-lg overflow-hidden shadow-md border-4 border-white">

@@ -44,7 +44,7 @@ const App: React.FC = () => {
   };
   
   const navItems = getNavItems();
-  const targetDate = eventType === 'civil' ? "2026-05-08T12:00:00" : "2026-05-15T14:00:00";
+  const targetDate = eventType === 'civil' ? "2026-05-08T12:00:00" : "2026-05-15T13:45:00";
   const showAlmDetails = eventType === 'alm' || eventType === 'all';
   const showCivilDetails = eventType === 'civil' || eventType === 'all';
 
